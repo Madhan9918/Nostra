@@ -1,0 +1,530 @@
+ body {
+     font-family: "Poppins", sans-serif;
+ }
+
+ * {
+     margin: 0px;
+     padding: 0px;
+ }
+
+ html {
+     scroll-behavior: smooth;
+ }
+
+
+ body::-webkit-scrollbar {
+     width: 0;
+ }
+
+ .offer-bar {
+     background-color: black;
+     color: white;
+     padding: 5px;
+     text-align: center;
+     font-size: 1.5dvw;
+ }
+
+ /*Navbar*/
+ .navbar {
+     display: flex;
+     justify-content: space-between;
+     color: black;
+     align-items: center;
+     position: sticky;
+     top: 0px;
+     background-color: white;
+     padding-top: 1vw;
+     padding-bottom: 1vw;
+     padding-left: 20px;
+     padding-right: 20px;
+     z-index: 3;
+ }
+
+ .navbar-links {
+     display: flex;
+     width: 50%;
+     justify-content: space-around;
+     align-items: center;
+ }
+
+ .navbar-links a {
+     text-decoration: none;
+     color: #1D232C;
+ }
+
+ .navbar-links a:hover {
+     text-decoration: underline;
+     color: #1D232C;
+ }
+
+
+
+ /*Menu Toggle*/
+ .navbar-menu-toggle {
+     display: none;
+ }
+
+ /*0 to 800px */
+ @media screen and (max-width:900px) {
+
+     .navbar-menu-toggle {
+         display: block;
+     }
+
+     .navbar-links {
+         display: none;
+     }
+ }
+
+ /*Side Navbar*/
+ .side-navbar {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 35%;
+     height: 100%;
+     background-color: black;
+     color: white;
+     margin-left: -60%;
+     transition-duration: 1.5s;
+     z-index: 10;
+     padding: 20px;
+ }
+
+ .side-navbar-link {
+     margin-bottom: 30px;
+ }
+
+ .side-navbar-links a {
+     text-decoration: none;
+     color: #E2E1E1;
+ }
+
+ .side-navbar-links a:hover {
+     text-decoration: underline;
+     color: #E2E1E1;
+ }
+
+
+ .container {
+     margin-left: 15px;
+     margin-right: 15px;
+ }
+
+
+ /*Slider*/
+
+ .slider{
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    position: relative;
+    border-radius: 5px;
+ }
+ .slider-image-container{
+    display: flex;
+    transition: 2s;
+ }
+ .slider-image{
+    width: 100vw;
+ }
+ .slider-left-button{
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    z-index: 1;
+ }
+ .slider-left-button i{
+    font-size: 8vw;
+    color: white;
+ }
+ .slider-right-button{
+    position: absolute;
+    top: 35%;
+    right: 5%;
+ }
+ .slider-right-button i{
+    font-size: 8vw;
+    color: white;
+ }
+ .slider-content{
+    position: absolute;
+    color: white;
+    text-align: center;
+    width: 100%;
+    top: 10%;
+ }
+ .slider-content h1{
+    font-size: 4vw;
+ }
+ .slider-content h4{
+    font-size: 3vw;
+ }
+ .slider-content button{
+   padding-left: 15px;
+   padding-right: 15px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   margin-top: 10px;
+   color: #1D232C;
+   font-weight: 700;
+ }
+
+
+ /*Brand Logos*/
+ .brands{
+    display: flex;
+    margin-top: 2vw;
+    justify-content: space-between;
+    
+}
+.brands-icon{
+    width: 5vw;
+    height: 4vw;
+    align-items: center;
+}
+.brands-item{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 2vw;
+}
+.brands-item p{
+    font-weight: 600;
+}
+
+
+
+/*Services*/
+
+.service-container-1{
+    margin-top: 5vw;
+    margin-bottom: 2vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3vw;
+}
+
+.service-container-2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-size: 1vw;
+}
+.service-container-2 div{
+    border-radius: 5px;
+    background-color: whitesmoke;
+    padding: 10px;
+}
+
+/*New Arrivals*/
+
+.new-arrival{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2vw;
+}
+
+.new-arrival-container{
+   position: relative;
+   
+}
+
+.new-arrival-container img{
+    border-radius: 2%;
+     
+ }
+ 
+.overlay{
+    border-radius: 2%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 2;
+    top: 0;
+    opacity: 0.5;
+ }
+ 
+.new-arrival button{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-top: 10px;
+    font-size: 1.2vw;
+    color: #1D232C;
+    border-radius: 10px;
+    position: absolute;
+    border: none;
+    top: 70%;
+    left: 22%;
+    z-index: 2;
+ }
+
+
+ /*Most Wanted*/
+.most-wanted{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2vw;
+    overflow-x: scroll;
+    gap: 20px;
+}
+.most-wanted-container{
+    position: relative;
+}
+.most-wanted img{
+    border-radius: 1%;
+}
+.sale-overlay{
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    font-size: 1.2vw;
+    background-color: red;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+.most-wanted::-webkit-scrollbar{
+    appearance: none;
+}
+.like-button{
+    position: absolute;
+    width: 10%;
+    right: 5%;
+    top: 2%;
+}
+.most-wanted-text{
+    font-size: 1.1vw;
+}
+
+
+/*Limited Offer*/
+
+.limited-offer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1D232C;
+    color: #E2E1E1;
+    padding: 20px;
+    font-size: 1.8vw;
+}
+.limited-offer img{
+    width: 100%;
+    height: 100%;
+}
+.limited-offer-text{
+    padding: 5%;
+}
+.limited-offer button{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    margin-top: 10px;
+    font-size: 1.2vw;
+    color: #1D232C;
+    border: none;
+    font-weight: 800;
+}
+
+/*Scroll Animate*/
+
+.initial-scroll-animate{
+    transition: 3s;
+}
+.reveal-scroll-animate{
+    opacity: 0;
+}
+
+
+/*News Input*/
+.news{
+    font-size: 2vw;
+    margin-top: 4vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.news input {
+    padding: 10px;
+    width: 80vw;
+    margin-bottom: 10px;
+    border: solid black 3px;
+}
+.news input:focus{
+    outline: none;
+}
+.news button{
+    font-size: 1.5vw;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+}
+
+/*Footer*/
+.footer{
+    font-size: 1.8vw;
+    margin-top: 5vw;
+    padding: 40px;
+    background-color: #1D232C;
+    color: #E2E1E1;
+    box-sizing: border-box;
+}
+.footer-container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.footer-box-1{
+    display: flex;
+    flex-direction: column;
+}
+.icon{
+    
+    margin: 1vw;
+}
+
+
+/*COLLECTIONS*/
+
+.divide-section{
+    display: flex;
+}
+.filter-section{
+    flex-basis: 25%;
+    position: relative;
+    font-size: 1.5vw;
+}
+.product-section{
+    flex-basis: 75%;
+    position: relative;
+}
+.vertical-line{
+    border:none;
+    border-left: 3px solid #1D232C;
+    height: 100%;
+    margin: 0 20px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.filter-section-arrivals,.filter-section-brands,.filter-section-colors{
+    margin-top: 1vw;
+    margin-bottom: 5px;
+    font-size: 1.5vw;
+
+}
+.filter-section-input
+{
+    font-size: 1.3vw;
+    align-items: center;
+}
+
+
+
+/*Products*/
+.navbar-search {
+    border: solid #1D232C 1px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    width: 95%;
+}
+
+.navbar-search input{
+    border: none;
+    width: 100%;
+    background-color: transparent;
+    
+}
+input:focus {
+    outline: none;
+}
+
+.product-section{
+    padding: 10px;
+}
+.products{
+    margin-top: 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size:1vw;
+
+}
+
+
+
+/*Contact Us*/
+
+.contact-form{
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+    width: 50vw;
+    margin: auto;
+    padding: 4vw;
+    padding-right: 10vw;
+    margin-top: 10px;
+}
+.contact-form h2{
+    margin-bottom: 1vw;
+    font-size: 2vw;
+}
+.contact-form label{
+    display: block;
+    margin-bottom: 1vw;
+    font-size: 1.5vw;
+}
+.contact-form input[type ="text"]
+{
+    width: 74%;
+    padding: 0.5vw;
+    border: 1px solid white;
+    border-radius: 3px;
+    margin-bottom: 1vw;
+    font-size: 1vw;
+}
+.contact-form textarea{
+    width: 70%;
+    padding: 1.5vw;
+    border: 1px solid white;
+    border-radius: 3px;
+    margin-bottom: 1vw;
+    font-size: 1vw;
+}
+.contact-form textarea:focus{
+    outline: none;
+}
+.contact-form textarea {
+    resize: vertical;
+    height: 9vh;
+}
+.contact-form button{
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5vw;
+    font-weight: 500;
+    background-color: blue;
+}
+.contact-form input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+
+
+
